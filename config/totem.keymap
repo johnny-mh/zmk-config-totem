@@ -74,12 +74,14 @@
     };
 
     macros {
-        press_two_keys: gif {
-            label = "giphy";
+        press_two_keys: lm {
+            label = "LM";
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1>,
+                <&macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER &macro_param_2to1>,
                 <&macro_tap>,
                 <&kp MACRO_PLACEHOLDER>;
         };
@@ -155,10 +157,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp PIPE                &kp DOLLAR         &kp LEFT_BRACE              &kp RIGHT_BRACE                 &trans           &kp PLUS   &kp N7  &kp N8  &kp N9  &kp SEMICOLON
-        &mt LSHIFT EXCLAMATION  &mt LCTRL AT_SIGN  &mt LGUI LEFT_PARENTHESIS   &mt LALT RIGHT_PARENTHESIS      &kp BACKSLASH    &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY
-&trans  &kp AMPERSAND           &kp LCTRL          &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &kp GRAVE        &kp MINUS  &kp N1  &kp N2  &kp N3  &kp PERIOD       &kp SLASH
-                                                   &trans                      &trans                          &trans           &trans     &kp N0  &trans
+        &kp PIPE                &kp DOLLAR         &kp LEFT_BRACE              &kp RIGHT_BRACE                 &press_two_keys EQUAL GREATER_THAN    &kp PLUS   &kp N7  &kp N8  &kp N9  &kp SEMICOLON
+        &mt LSHIFT EXCLAMATION  &mt LCTRL AT_SIGN  &mt LGUI LEFT_PARENTHESIS   &mt LALT RIGHT_PARENTHESIS      &kp BACKSLASH                         &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY
+&trans  &kp AMPERSAND           &kp LCTRL          &mt LESS_THAN LEFT_BRACKET  &mt GREATER_THAN RIGHT_BRACKET  &kp GRAVE                             &kp MINUS  &kp N1  &kp N2  &kp N3  &kp PERIOD       &kp SLASH
+                                                   &trans                      &trans                          &trans                                &trans     &kp N0  &trans
             >;
         };
 
