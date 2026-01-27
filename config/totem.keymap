@@ -133,10 +133,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp HOME      &kp UP_ARROW  &kp END        &kp PG_UP
-        &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT      &kp DOWN      &kp RIGHT      &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LA(LEFT)  &trans        &kp LA(RIGHT)  &kp PG_DN  &kp CAPS
-                        &trans  &trans  &trans    &trans  &trans        &trans
+        &trans  &trans  &trans  &trans  &trans    &kp C_VOICE_COMMAND  &kp HOME      &kp UP_ARROW  &kp END        &kp PG_UP
+        &trans  &trans  &trans  &trans  &trans    &trans               &kp LEFT      &kp DOWN      &kp RIGHT      &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans               &kp LA(LEFT)  &trans        &kp LA(RIGHT)  &kp PG_DN  &kp CAPS
+                        &trans  &trans  &trans    &trans               &trans        &trans
             >;
         };
 
